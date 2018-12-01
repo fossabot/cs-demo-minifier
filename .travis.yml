@@ -34,6 +34,7 @@ deploy:
   script: curl -sL https://git.io/goreleaser | bash
   on:
     tags: true
+    condition: $TRAVIS_GO_VERSION =~ ^1\.11
 
 notifications:
   webhooks:
